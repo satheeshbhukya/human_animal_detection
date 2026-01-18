@@ -12,7 +12,7 @@ This separation improves modularity, interpretability, and flexibility.
 ## Clone the Repository
 
 ```
-git clone https://github.com/<your-username>/human_animal_detection.git
+git clone https://github.com/satheeshbhukya/human_animal_detection.git
 cd human_animal_detection
 ```
 
@@ -33,26 +33,25 @@ pip install -r requirements.txt
 ```
 human_animal_detection/
 │
+├── Notebook/
+│   └── Notebook.ipynb           # Main notebook (runs all scripts in Colab)
 ├── models/
 │   ├── detector_mobilenet.pth
 │   └── classifier_resnet18.pth
 │
 ├── scripts/
 │   ├── dataset.py               # Detection dataset loader
-│   ├── dataset_cls.py           # Classification dataset loader
-│   ├── train_detector.py
+│   ├── dataset_cls.py            # Classification dataset loader
+│   ├── inference.py
 │   ├── train_classifier.py
-│   └── inference_video.py
-│
-├── Notebook/
-│   └── Notebook.ipynb           # Main notebook (runs all scripts in Colab)
+│   └── train_detector.py
 │
 ├── test_video/
 │   ├── video.mp4                # Input video
 │   └── output.mp4               # Output annotated video
 │
-├── requirements.txt
-└── README.md
+├── readme.md
+└── requirements.txt
 ```
 
 ---
@@ -271,7 +270,7 @@ Train classifier:
 Run inference:
 
 ```
-!python scripts/inference_video.py
+!python scripts/inference.py
 ```
 
 ---
